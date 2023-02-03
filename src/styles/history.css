@@ -1,14 +1,14 @@
-.history{
+.history {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.history a{
+.history a {
   text-decoration: none;
 }
 
-.history .separator{
+.history .separator {
   width: 6px;
   height: 6px;
   border-radius: 50%;

@@ -5,10 +5,10 @@ import productsSlice from './slices/products.slice'
 import purchasesSlice from './slices/purchases.slice'
 
 export default configureStore({
-    reducer: {
-        app: appSlice,
-        products: productsSlice,
-        cart: cartSlice,
-        purchases: purchasesSlice
-    }
+  reducer: {
+    app: appSlice,
+    products: productsSlice,
+    cart: cartSlice,
+    purchases: purchasesSlice,
+  },
 })

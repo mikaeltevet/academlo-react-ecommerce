@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&family=Yantramanav:wght@100;300;400;500;700;900&display=swap');
 
-*{
+* {
   font-family: 'Yantramanav', sans-serif;
   margin: 0;
   padding: 0;
@@ -8,34 +8,34 @@
   color: #515151;
 }
 
-:root{
-  --primary: #F85555;
-  --light-gray: #DCD9D9;
-  --gray: #C7C7C7;
-  --dark-gray: #4F4F4F;
-  --text-gray: #ABABAB;
+:root {
+  --primary: #f85555;
+  --light-gray: #dcd9d9;
+  --gray: #c7c7c7;
+  --dark-gray: #4f4f4f;
+  --text-gray: #ababab;
 }
 
-input{
+input {
   font-size: 1rem;
   outline: none;
 }
 
-i{
+i {
   color: inherit;
 }
 
-button{
+button {
   border: none;
   cursor: pointer;
   font-size: 1rem;
 }
 
-img{
+img {
   width: 100%;
 }
 
-.minimalist-scrollbar{
+.minimalist-scrollbar {
   overflow: auto;
 }
 /* width */
@@ -43,64 +43,63 @@ img{
   width: 7px;
 }
 
-
 /* Handle */
 .minimalist-scrollbar::-webkit-scrollbar-thumb {
   background: var(--light-gray);
   border-radius: 10px;
 }
 
-#root{
+#root {
   display: flex;
   flex-direction: column;
   height: 100%;
   min-height: 100vh;
 }
 
-.quantity-box .flex{
+.quantity-box .flex {
   display: flex;
 }
 
-.quantity-box button{
+.quantity-box button {
   width: 30px;
   height: 30px;
   background: none;
   line-height: 1.9;
 }
 
-.quantity-box button, 
-.quantity-box .value{
+.quantity-box button,
+.quantity-box .value {
   border: 1px solid var(--light-gray);
 }
 
-.quantity-box .value{
+.quantity-box .value {
   line-height: 1.7;
   padding: 0 20px;
 }
 
-.content{
+.content {
   flex: 1;
 }
 
-.main-container{
+.main-container {
   padding: 13px 20px;
   margin: 0 auto;
 }
 
 @media (min-width: 576px) {
-  .main-container{
+  .main-container {
     max-width: 579px;
   }
 }
 
 @media (min-width: 768px) {
-  .main-container{
+  .main-container {
     max-width: 721px;
   }
 }
 
 @media (min-width: 992px) {
-  .main-container{
+  .main-container {
     max-width: 976px;
   }
 }

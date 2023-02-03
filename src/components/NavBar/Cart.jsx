@@ -6,55 +6,51 @@ import '../../styles/cart.css'
 import CartProduct from './CartProduct'
 
 const Cart = ({ handleClose }) => {
+  const cartProducts = useSelector((state) => state.cart)
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
 
-    const cartProducts = useSelector(state => state.cart)
+  let total = 0
 
-    const navigate = useNavigate()
-    const dispatch = useDispatch()
+  cartProducts.forEach((product) => {
+    total += product.product.price * product.quantity
+  })
 
-    let total = 0
+  const checkout = () => {
+    dispatch(purchaseCartThunk())
+    navigate('/purchases')
+    handleClose()
+  }
 
-    cartProducts.forEach(product => {
-        total += product.product.price * product.quantity
-    })
-    
-    const checkout = () => {
-        dispatch(purchaseCartThunk())
-        navigate("/purchases")
-        handleClose()
-    }
-
-    return (
-        <div className='cart'>
-            <div className="minimalist-scrollbar">
-
-                <h4>Carrito de compras</h4>
-
-                <ul className="cart-products-list">
-                    {
-                        cartProducts?.map(cartProduct => (
-                            <CartProduct 
-                                cartProduct={cartProduct} 
-                                handleClose={handleClose} 
-                                key={cartProduct.id}
-                            />
-                        ))
-                    }
-                </ul>
-            </div>
-
-            <div className="checkout-section">
-                <div className="total">
-                    <span className="label">Total:</span>
-                    <b>$ {total}</b>
-                </div>
-
-                <button className='buy-button' onClick={checkout} disabled={!Boolean(cartProducts)}>
-                    Checkout
-                </button>
-            </div>
+  return (
+    <div className='cart'>
+      <div className='minimalist-scrollbar'>
+        <h4>Shopping cart</h4>
+        <ul className='cart-products-list'>
+          {cartProducts?.map((cartProduct) => (
+            <CartProduct
+              cartProduct={cartProduct}
+              handleClose={handleClose}
+              key={cartProduct.id}
+            />
+          ))}
+        </ul>
+      </div>
+      <div className='checkout-section'>
+        <div className='total'>
+          <span className='label'>Total:</span>
+          <b>$ {total}</b>
         </div>
-    )
+        <button
+          className='buy-button'
+          onClick={checkout}
+          disabled={!Boolean(cartProducts)}
+        >
+          Checkout
+        </button>
+      </div>
+    </div>
+  )
 }
 
 export default Cart

@@ -1,15 +1,15 @@
-.filter-drop-down{
+.filter-drop-down {
   overflow: hidden;
   transition: 1s all;
   max-height: 300px;
   margin-bottom: 10px;
 }
 
-.filter-drop-down.closed{
+.filter-drop-down.closed {
   max-height: 40px;
 }
 
-.filter-drop-down .header{
+.filter-drop-down .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,32 +21,32 @@
   font-weight: 600;
 }
 
-.filter-drop-down .header i{
+.filter-drop-down .header i {
   font-weight: 600;
   font-size: 1.2rem;
   transition: 1s all;
 }
 
-.filter-drop-down.closed .header i{
+.filter-drop-down.closed .header i {
   transform: rotate(-180deg);
 }
 
-.filter-drop-down .content{
+.filter-drop-down .content {
   padding: 20px 0;
 }
 
-.filters .price-filter label{
+.filters .price-filter label {
   margin-bottom: 17px;
   display: flex;
   align-items: center;
   padding-left: 10px;
 }
 
-.filters .price-filter label span{
+.filters .price-filter label span {
   width: 20%;
 }
 
-.filters .price-filter label input{
+.filters .price-filter label input {
   display: block;
   width: 80%;
   border: 1px solid var(--light-gray);
@@ -55,7 +55,7 @@
   font-size: 1rem;
 }
 
-.filters .price-filter button{
+.filters .price-filter button {
   background: var(--primary);
   padding: 8px 15px;
   color: #fff;
@@ -64,14 +64,14 @@
   margin: 25px 0 20px auto;
 }
 
-.filters .category-filter{
+.filters .category-filter {
   list-style: none;
 }
 
-.filters .category-filter li{
+.filters .category-filter li {
   margin: 0 0 10px 20px;
 }
 
-.filters .category-filter li button{
+.filters .category-filter li button {
   background: none;
 }

@@ -1,34 +1,34 @@
-.home .main-container{
+.home .main-container {
   padding-top: 50px;
 }
 
-.home aside{
+.home aside {
   display: none;
 }
 
-.search-box{
+.search-box {
   position: relative;
   margin: 0 10px 30px;
 }
 
-.search-box .input{
+.search-box .input {
   display: flex;
   margin-bottom: 15px;
   max-width: 900px;
 }
 
-.search-box .input input{
+.search-box .input input {
   flex: 1;
   border: 1px solid var(--light-gray);
   padding: 5px 14px;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
-.search-box .input input::placeholder { 
+.search-box .input input::placeholder {
   color: var(--gray);
 }
 
-.search-box .input button{
+.search-box .input button {
   width: 45px;
   height: 45px;
   border: none;
@@ -38,21 +38,21 @@
   line-height: 1;
 }
 
-.search-box .filter-button{
+.search-box .filter-button {
   display: block;
   margin: 0 0 10px auto;
   background: transparent;
-  font-size: .95rem;
+  font-size: 0.95rem;
   color: var(--gray);
   display: flex;
 }
 
-.search-box .filter-button i{
+.search-box .filter-button i {
   margin-right: 11px;
   font-size: 1.3rem;
 }
 
-.search-box .filters-modal{
+.search-box .filters-modal {
   position: fixed;
   background: #fff;
   right: 0;
@@ -64,27 +64,27 @@
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   transform: translateX(100%);
   transform-origin: top right;
-  transition: .7s all ease;
+  transition: 0.7s all ease;
   z-index: 99;
 }
 
-.search-box .filters-modal.open{
+.search-box .filters-modal.open {
   transform: translateX(0);
 }
 
-.search-box .filters-modal .close{
+.search-box .filters-modal .close {
   display: block;
   margin: 0 0 15px auto;
   background: transparent;
   font-size: 1.3rem;
 }
 
-.search-box .filters-modal h5{
+.search-box .filters-modal h5 {
   font-size: 1.1rem;
   margin-bottom: 10px;
 }
 
-.overlay{
+.overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -92,73 +92,69 @@
   bottom: 0;
 }
 
-
-
-
-.products-list{
+.products-list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
 }
 
-.products-list li{
+.products-list li {
   padding: 20px 10px;
   width: 100%;
 }
 
-
-
 @media (min-width: 576px) {
-  .products-list li{
-      width: 50%;
+  .products-list li {
+    width: 50%;
   }
 }
 
 @media (min-width: 992px) {
-  .home{
-      display: flex;
+  .home {
+    display: flex;
   }
-  .home aside{
-      display: block;
-      width: 300px;
-      padding: 20px;
-      padding-top: 50px;
+  .home aside {
+    display: block;
+    width: 300px;
+    padding: 20px;
+    padding-top: 50px;
   }
-  .home aside .fixed{
-      position: fixed;
+  .home aside .fixed {
+    position: fixed;
   }
-  .home .main-container, .home aside{
-      padding-top: 50px;
+  .home .main-container,
+  .home aside {
+    padding-top: 50px;
   }
-  .home section{
-      max-width: none;
-      flex: 1;
+  .home section {
+    max-width: none;
+    flex: 1;
   }
-  .search-box .filter-button{
-      display: none;
+  .search-box .filter-button {
+    display: none;
   }
 }
 
 @media (min-width: 1200px) {
-  .products-list li{
-      width: 33.33333%;
+  .products-list li {
+    width: 33.33333%;
   }
 }
 
 @media (min-width: 1300px) {
-  .products-list li{
-      padding: 30px;
+  .products-list li {
+    padding: 30px;
   }
-  .home section{
-      padding: 40px;
+  .home section {
+    padding: 40px;
   }
-  .search-box{
-      margin: 0 30px 60px;
+  .search-box {
+    margin: 0 30px 60px;
   }
-  .search-box .input{
-      margin: 0 auto;
+  .search-box .input {
+    margin: 0 auto;
   }
-  .search-box .input button{
-      width: 100px;
+  .search-box .input button {
+    width: 100px;
   }
 }

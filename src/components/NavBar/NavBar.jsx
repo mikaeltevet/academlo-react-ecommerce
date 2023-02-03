@@ -7,64 +7,61 @@ import { getCartThunk } from '../../store/slices/cart.slice'
 import { setLoginMessage } from '../../store/slices/app.slice'
 
 const NavBar = () => {
+  const [isCartOpen, setIsCartOpen] = useState(false)
 
-    const [ isCartOpen, setIsCartOpen ] = useState(false)
+  const dispatch = useDispatch()
 
-    const dispatch = useDispatch()
+  const navigate = useNavigate()
 
-    const navigate = useNavigate()
-
-    const openCart = () => {
-        if(localStorage.getItem("token")){
-            setIsCartOpen(!isCartOpen)
-            dispatch(getCartThunk())
-        } else {
-            navigate("/login")
-            dispatch(setLoginMessage("You have to Log In to access to your cart"))
-        }
+  const openCart = () => {
+    if (localStorage.getItem('token')) {
+      setIsCartOpen(!isCartOpen)
+      dispatch(getCartThunk())
+    } else {
+      navigate('/login')
+      dispatch(setLoginMessage('You have to Log In to access to your cart'))
     }
+  }
 
-    const openPurchases = () => {
-        navigate("/purchases")
-    }
+  const openPurchases = () => {
+    navigate('/purchases')
+  }
 
-    return (
-        <div className="navbar">
-            <div className="fixed">
-                <nav>
-                    <div className="title">
-                        <strong onClick={() => navigate("/")}>
-                            e-commerce
-                        </strong>
-                    </div>
+  return (
+    <div className='navbar'>
+      <div className='fixed'>
+        <nav>
+          <div className='title'>
+            <strong onClick={() => navigate('/')}>e-commerce</strong>
+          </div>
 
-                    <button className="icon" onClick={() => navigate("/user")} >
-                        <i className="fa-solid fa-user"></i>
-                    </button>
+          <button className='icon' onClick={() => navigate('/user')}>
+            <i className='fa-solid fa-user'></i>
+          </button>
 
-                    <button onClick={openPurchases} className='icon'>
-                        <i className="fa-solid fa-archive"></i>
-                    </button>
+          <button onClick={openPurchases} className='icon'>
+            <i className='fa-solid fa-archive'></i>
+          </button>
 
-                    <button 
-                        className="icon" 
-                        onClick={openCart}
-                        style={{color: isCartOpen ? 'var(--primary)' : ''}}
-                    >
-                        <i className="fa-solid fa-shopping-cart"></i>
-                    </button>
-                </nav>
+          <button
+            className='icon'
+            onClick={openCart}
+            style={{ color: isCartOpen ? 'var(--primary)' : '' }}
+          >
+            <i className='fa-solid fa-shopping-cart'></i>
+          </button>
+        </nav>
 
-                <div className={`cart-modal ${isCartOpen ? 'open' : ''}`}>
-                    <Cart handleClose={() => setIsCartOpen(false)} />
-                </div>
-
-                { isCartOpen && 
-                    <div className="overlay" onClick={() => setIsCartOpen(false)}></div>
-                }
-            </div>
+        <div className={`cart-modal ${isCartOpen ? 'open' : ''}`}>
+          <Cart handleClose={() => setIsCartOpen(false)} />
         </div>
-    )
+
+        {isCartOpen && (
+          <div className='overlay' onClick={() => setIsCartOpen(false)}></div>
+        )}
+      </div>
+    </div>
+  )
 }
 
 export default NavBar
