@@ -47,7 +47,7 @@ const Product = () => {
         </div>
       </div>
       <div className='suggestions'>
-        <strong>Discover similar items</strong>
+        <strong>Discover similar products</strong>
         <ul>
           {productsFiltered.map((product) => (
             <li key={product.id}>

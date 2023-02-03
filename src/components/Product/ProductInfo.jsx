@@ -21,7 +21,7 @@ const ProductInfo = ({ product }) => {
     } else {
       navigate('/login')
       dispatch(
-        setLoginMessage('You have to log in to add products to your cart')
+        setLoginMessage('You must first log in to add products to your cart.')
       )
     }
   }

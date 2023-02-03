@@ -17,7 +17,7 @@ const ProductCard = ({ product }) => {
       }
       dispatch(addToCartThunk(productCart))
     } else {
-      dispatch(setLoginMessage('You must login to add to cart'))
+      dispatch(setLoginMessage('You must first log in to add products to your cart.'))
       navigate('/login')
     }
   }
