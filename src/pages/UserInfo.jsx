@@ -15,7 +15,8 @@ const UserInfo = () => {
     <div className='login-container'>
       <div className='main-container'>
         <div className='login user-info'>
-          <img src={userAvatar} alt='' className='user-avatar' />
+          <i className='fa-solid fa-user fa-10x'></i>
+          <br /><br />
           <b>{localStorage.getItem('userName')}</b>
           <button onClick={logout}>Log out</button>
         </div>
