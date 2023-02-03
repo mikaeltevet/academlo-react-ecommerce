@@ -1,10 +1,10 @@
-import SearchBox from '../components/Home/SearchBox'
-import Filters from '../components/Home/Filters'
-import ProductCard from '../components/ProductCard'
-import { useDispatch, useSelector } from 'react-redux'
-import '../styles/home.css'
 import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import Filters from '../components/Home/Filters'
+import SearchBox from '../components/Home/SearchBox'
+import ProductCard from '../components/ProductCard'
 import { getProductsThunk } from '../store/slices/productsSlice'
+import '../styles/home.css'
 
 const Home = () => {
   const productsList = useSelector((state) => state.products.productsList)

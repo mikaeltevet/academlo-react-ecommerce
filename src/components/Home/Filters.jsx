@@ -1,12 +1,11 @@
-import DropDown from './DropDown'
-import { useDispatch } from 'react-redux'
-import { useState } from 'react'
-import { useEffect } from 'react'
 import axios from 'axios'
+import { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
 import {
   filterCategoryThunk,
-  filterPrice,
+  filterPrice
 } from '../../store/slices/productsSlice'
+import DropDown from './DropDown'
 
 const Filters = ({ handleClose }) => {
   const [categories, setCategories] = useState([])

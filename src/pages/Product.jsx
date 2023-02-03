@@ -1,12 +1,12 @@
-import Gallery from '../components/Product/Gallery'
-import ProductInfo from '../components/Product/ProductInfo'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import History from '../components/History'
-import ProductCard from '../components/ProductCard'
 import { useParams } from 'react-router-dom'
-import '../styles/product-detail.css'
+import History from '../components/History'
+import Gallery from '../components/Product/Gallery'
+import ProductInfo from '../components/Product/ProductInfo'
+import ProductCard from '../components/ProductCard'
 import { getProductsThunk } from '../store/slices/productsSlice'
+import '../styles/product-detail.css'
 
 const Product = () => {
   const { id } = useParams()

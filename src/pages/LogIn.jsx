@@ -3,8 +3,7 @@ import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { setIsLoading } from '../store/slices/appSlice'
-import { setLoginMessage } from '../store/slices/appSlice'
+import { setIsLoading, setLoginMessage } from '../store/slices/appSlice'
 import '../styles/login.css'
 
 const LogIn = () => {

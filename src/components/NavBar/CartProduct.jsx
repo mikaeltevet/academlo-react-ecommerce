@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import {
   deleteFromCartThunk,
-  modifyQuantityThunk,
+  modifyQuantityThunk
 } from '../../store/slices/cartSlice'
 
 const CartProduct = ({ cartProduct, handleClose }) => {

@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import Cart from './Cart'
-import '../../styles/navbar.css'
-import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import { getCartThunk } from '../../store/slices/cartSlice'
+import { useNavigate } from 'react-router-dom'
 import { setLoginMessage } from '../../store/slices/appSlice'
+import { getCartThunk } from '../../store/slices/cartSlice'
+import '../../styles/navbar.css'
+import Cart from './Cart'
 
 const NavBar = () => {
   const [isCartOpen, setIsCartOpen] = useState(false)

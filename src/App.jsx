@@ -1,17 +1,14 @@
-import './App.css'
+import { useSelector } from 'react-redux'
 import { HashRouter, Route, Routes } from 'react-router-dom'
-import {
-  Home,
-  Product,
-  Purchases,
-  LogIn,
-  SignUp,
-  UserInfo,
-} from './pages/Pages'
+import './App.css'
 import { Footer, LoadingScreen } from './components/Components'
 import NavBar from './components/NavBar/NavBar'
-import { useSelector } from 'react-redux'
 import ProtectedRoutes from './components/ProtectedRoutes'
+import {
+  Home, LogIn, Product,
+  Purchases, SignUp,
+  UserInfo
+} from './pages/Pages'
 
 function App() {
   const isLoading = useSelector((state) => state.app.isLoading)
