@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { setLoginMessage } from '../../store/slices/app.slice'
-import { addToCartThunk } from '../../store/slices/cart.slice'
+import { setLoginMessage } from '../../store/slices/appSlice'
+import { addToCartThunk } from '../../store/slices/cartSlice'
 
 const ProductInfo = ({ product }) => {
   const [quantity, setQuantity] = useState(1)

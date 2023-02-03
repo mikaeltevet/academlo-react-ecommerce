@@ -4,7 +4,7 @@ import ProductCard from '../components/ProductCard'
 import { useDispatch, useSelector } from 'react-redux'
 import '../styles/home.css'
 import { useEffect } from 'react'
-import { getProductsThunk } from '../store/slices/products.slice'
+import { getProductsThunk } from '../store/slices/productsSlice'
 
 const Home = () => {
   const productsList = useSelector((state) => state.products.productsList)

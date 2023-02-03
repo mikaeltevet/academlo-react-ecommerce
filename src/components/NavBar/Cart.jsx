@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { purchaseCartThunk } from '../../store/slices/purchases.slice'
+import { purchaseCartThunk } from '../../store/slices/purchasesSlice'
 import '../../styles/cart.css'
 import CartProduct from './CartProduct'
 

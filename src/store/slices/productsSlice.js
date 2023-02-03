@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import axios from 'axios'
-import { setIsLoading } from './app.slice'
+import { setIsLoading } from './appSlice'
 
 export const productsSlice = createSlice({
   name: 'products',

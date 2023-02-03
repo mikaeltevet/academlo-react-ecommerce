@@ -6,7 +6,7 @@ import History from '../components/History'
 import ProductCard from '../components/ProductCard'
 import { useParams } from 'react-router-dom'
 import '../styles/product-detail.css'
-import { getProductsThunk } from '../store/slices/products.slice'
+import { getProductsThunk } from '../store/slices/productsSlice'
 
 const Product = () => {
   const { id } = useParams()

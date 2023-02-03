@@ -1,8 +1,8 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
-import { setLoginMessage } from '../store/slices/app.slice'
-import { addToCartThunk } from '../store/slices/cart.slice'
+import { setLoginMessage } from '../store/slices/appSlice'
+import { addToCartThunk } from '../store/slices/cartSlice'
 import '../styles/product-card.css'
 
 const ProductCard = ({ product }) => {

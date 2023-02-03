@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { setIsLoading } from '../store/slices/app.slice'
+import { setIsLoading } from '../store/slices/appSlice'
 import '../styles/login.css'
 
 const SignUp = () => {

@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit'
-import appSlice from './slices/app.slice'
-import cartSlice from './slices/cart.slice'
-import productsSlice from './slices/products.slice'
-import purchasesSlice from './slices/purchases.slice'
+import appSlice from './slices/appSlice'
+import cartSlice from './slices/cartSlice'
+import productsSlice from './slices/productsSlice'
+import purchasesSlice from './slices/purchasesSlice'
 
 export default configureStore({
   reducer: {

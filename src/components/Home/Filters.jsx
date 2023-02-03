@@ -6,7 +6,7 @@ import axios from 'axios'
 import {
   filterCategoryThunk,
   filterPrice,
-} from '../../store/slices/products.slice'
+} from '../../store/slices/productsSlice'
 
 const Filters = ({ handleClose }) => {
   const [categories, setCategories] = useState([])

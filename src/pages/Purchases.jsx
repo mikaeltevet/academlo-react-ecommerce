@@ -3,7 +3,7 @@ import PurchaseItem from '../components/Purchases/PurchaseItem'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { getPurchasesThunk } from '../store/slices/purchases.slice'
+import { getPurchasesThunk } from '../store/slices/purchasesSlice'
 import '../styles/purchases.css'
 
 const Purchases = () => {

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import {
   deleteFromCartThunk,
   modifyQuantityThunk,
-} from '../../store/slices/cart.slice'
+} from '../../store/slices/cartSlice'
 
 const CartProduct = ({ cartProduct, handleClose }) => {
   const dispatch = useDispatch()

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { filterNameThunk } from '../../store/slices/products.slice'
+import { filterNameThunk } from '../../store/slices/productsSlice'
 import Filters from './Filters'
 
 const SearchBox = () => {
