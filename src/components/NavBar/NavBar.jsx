@@ -19,7 +19,7 @@ const NavBar = () => {
       dispatch(getCartThunk())
     } else {
       navigate('/login')
-      dispatch(setLoginMessage('You have to Log In to access to your cart'))
+      dispatch(setLoginMessage('You must first log in to view your cart.'))
     }
   }
 
