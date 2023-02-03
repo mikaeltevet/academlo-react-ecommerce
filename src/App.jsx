@@ -1,5 +1,4 @@
 import './App.css'
-import './assets/icons/solid.css'
 import { HashRouter, Route, Routes } from 'react-router-dom'
 import {
   Home,
