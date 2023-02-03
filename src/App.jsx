@@ -5,7 +5,7 @@ import {
   Home,
   Product,
   Purchases,
-  Login,
+  LogIn,
   SignUp,
   UserInfo,
 } from './pages/Pages'
@@ -24,7 +24,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/product/:id' element={<Product />} />
-          <Route path='/login' element={<Login />} />
+          <Route path='/login' element={<LogIn />} />
           <Route path='/signup' element={<SignUp />} />
           <Route element={<ProtectedRoutes />}>
             <Route path='/purchases' element={<Purchases />} />

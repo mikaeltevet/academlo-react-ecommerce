@@ -7,7 +7,7 @@ import { setIsLoading } from '../store/slices/app.slice'
 import { setLoginMessage } from '../store/slices/app.slice'
 import '../styles/login.css'
 
-const Login = () => {
+const LogIn = () => {
   const { register, handleSubmit } = useForm()
 
   const loginMessage = useSelector((state) => state.app.loginMessage)
@@ -40,18 +40,8 @@ const Login = () => {
     <div className='login-container'>
       <div className='main-container'>
         <form className='login' onSubmit={handleSubmit(submit)}>
-          <strong>Welcome! Enter your email and password to continue</strong>
+          <strong>Welcome! Please log in to continue</strong>
           <p className='login-message'>{loginMessage}</p>
-
-          <div className='test-data'>
-            <b>Test data</b>
-            <div className='field'>
-              <i className='fa-solid fa-mail'></i>john@gmail.com
-            </div>
-            <div className='field'>
-              <i className='fa-solid fa-lock'></i>john1234
-            </div>
-          </div>
 
           <div className='input-container'>
             <label htmlFor='email'>Email</label>
@@ -62,7 +52,7 @@ const Login = () => {
             <input type='password' id='password' {...register('password')} />
           </div>
           <div className='error-message'>{error}</div>
-          <button className='submit-button'>Login</button>
+          <button className='submit-button'>Log in</button>
 
           <div className='switch-forms'>
             Don't have an account?{' '}
@@ -76,4 +66,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default LogIn
