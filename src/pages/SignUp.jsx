@@ -51,7 +51,7 @@ const SignUp = () => {
             <input type='password' id='password' {...register('password')} />
           </div>
           <div className='input-container'>
-            <label htmlFor='phone'>Phone (10 characters)</label>
+            <label htmlFor='phone'>Phone (10 digits)</label>
             <input type='tel' id='phone' {...register('phone')} />
           </div>
           <div className='error-message'>{error}</div>
