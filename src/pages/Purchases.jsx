@@ -17,7 +17,7 @@ const Purchases = () => {
 
   return (
     <section className='main-container purchases'>
-      <History currentPage='purchases' />
+      <History currentPage='Purchases' />
       <h1>My purchases</h1>
       {purchases.length ? (
         <ul className='purchase-products-list'>
