@@ -40,7 +40,7 @@ const LogIn = () => {
     <div className='login-container'>
       <div className='main-container'>
         <form className='login' onSubmit={handleSubmit(submit)}>
-          <strong>Welcome! Please log in to continue</strong>
+          <strong>Welcome! Log in to continue</strong>
           <p className='login-message'>{loginMessage}</p>
 
           <div className='input-container'>
