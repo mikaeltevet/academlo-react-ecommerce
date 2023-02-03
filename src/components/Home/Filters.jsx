@@ -9,23 +9,26 @@ import DropDown from './DropDown'
 
 const Filters = ({ handleClose }) => {
   const [categories, setCategories] = useState([])
+  const [priceFrom, setPriceFrom] = useState('')
+  const [priceTo, setPriceTo] = useState('')
+  const dispatch = useDispatch()
+
   useEffect(() => {
     axios
       .get('https://e-commerce-api-v2.academlo.tech/api/v1/categories')
       .then((res) => setCategories(res.data))
   }, [])
 
-  const dispatch = useDispatch()
-  const [priceFrom, setPriceFrom] = useState('')
-  const [priceTo, setPriceTo] = useState('')
   const selectPrice = (e) => {
     e.preventDefault()
     dispatch(filterPrice({ priceFrom, priceTo }))
   }
+
   const selectCategory = (id) => {
     handleClose()
     dispatch(filterCategoryThunk(id))
   }
+
   return (
     <div className='filters'>
       <DropDown header='Price range'>

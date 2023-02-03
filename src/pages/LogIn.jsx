@@ -8,31 +8,32 @@ import '../styles/login.css'
 
 const LogIn = () => {
   const { register, handleSubmit } = useForm()
-
   const loginMessage = useSelector((state) => state.app.loginMessage)
-
   const navigate = useNavigate()
-
   const [error, setError] = useState('')
-
   const dispatch = useDispatch()
 
-  const submit = (data) => {
+  const submit = async (data) => {
     dispatch(setIsLoading(true))
-    axios
-      .post('https://e-commerce-api-v2.academlo.tech/api/v1/users/login', data)
-      .then((res) => {
-        setError('')
-        dispatch(setLoginMessage(''))
-        navigate(-1)
-        localStorage.setItem('token', res.data.token)
-        localStorage.setItem(
-          'userName',
-          res.data.user.firstName + ' ' + res.data.user.lastName
-        )
-      })
-      .catch(() => setError('Invalid credentials'))
-      .finally(() => dispatch(setIsLoading(false)))
+
+    try {
+      const res = await axios.post(
+        'https://e-commerce-api-v2.academlo.tech/api/v1/users/login',
+        data
+      )
+      setError('')
+      dispatch(setLoginMessage(''))
+      navigate(-1)
+      localStorage.setItem('token', res.data.token)
+      localStorage.setItem(
+        'userName',
+        `${res.data.user.firstName} ${res.data.user.lastName}`
+      )
+    } catch (err) {
+      setError('Invalid credentials')
+    } finally {
+      dispatch(setIsLoading(false))
+    }
   }
 
   return (
@@ -41,7 +42,6 @@ const LogIn = () => {
         <form className='login' onSubmit={handleSubmit(submit)}>
           <strong>Welcome! Log in to continue</strong>
           <p className='login-message'>{loginMessage}</p>
-
           <div className='input-container'>
             <label htmlFor='email'>Email</label>
             <input type='text' id='email' {...register('email')} />
@@ -52,7 +52,6 @@ const LogIn = () => {
           </div>
           <div className='error-message'>{error}</div>
           <button className='submit-button'>Log in</button>
-
           <div className='switch-forms'>
             Don't have an account?{' '}
             <button type='button' onClick={() => navigate('/signup')}>

@@ -7,13 +7,10 @@ import { getProductsThunk } from '../store/slices/productsSlice'
 import '../styles/home.css'
 
 const Home = () => {
-  const productsList = useSelector((state) => state.products.productsList)
-  const productsFiltered = useSelector(
-    (state) => state.products.productsFiltered
+  const { productsList, productsFiltered } = useSelector(
+    (state) => state.products
   )
-
   const products = productsFiltered.length ? productsFiltered : productsList
-
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -22,10 +19,8 @@ const Home = () => {
 
   return (
     <div className='home'>
-      <aside>
-        <div className='fixed'>
-          <Filters handleClose={() => {}} />
-        </div>
+      <aside className='fixed'>
+        <Filters handleClose={() => {}} />
       </aside>
       <section className='main-container'>
         <SearchBox />
