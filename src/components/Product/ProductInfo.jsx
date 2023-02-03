@@ -46,19 +46,19 @@ const ProductInfo = ({product}) => {
                                     onClick={() => setQuantity(quantity-1)}
                                     disabled={quantity <= 1}
                                 >
-                                    <i className="icon-minus"></i>
+                                    <i className="fa-solid fa-minus"></i>
                                 </button>
                                 <div className="value">
                                     {quantity}
                                 </div>
                                 <button onClick={() => setQuantity(quantity+1)}>
-                                    <i className="icon-plus"></i>
+                                    <i className="fa-solid fa-plus"></i>
                                 </button>
                             </div>
                         </div>
                     </div>
                     <button className="add-cart-button" onClick={addToCart}>
-                        Add to cart <i className='icon-shopping-cart'></i>
+                        Add to cart <i className='fa-solid fa-shopping-cart'></i>
                     </button>
                 </div>
                 <p className='product-description'>

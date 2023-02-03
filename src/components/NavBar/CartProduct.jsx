@@ -34,20 +34,20 @@ const CartProduct = ({ cartProduct, handleClose }) => {
                                 onClick={() => modifyQuantity(cartProduct.quantity - 1)}
                                 disabled={cartProduct.quantity <= 1}
                             >
-                                <i className="icon-minus"></i>
+                                <i className="fa-solid fa-minus"></i>
                             </button>
                             <div className="value">
                                 {cartProduct.quantity}
                             </div>
                             <button onClick={() => modifyQuantity(cartProduct.quantity + 1)}>
-                                <i className="icon-plus"></i>
+                                <i className="fa-solid fa-plus"></i>
                             </button>
                         </div>
                     </div>
                 </div>
                 <div className="button-delete">
                     <button onClick={() => dispatch(deleteFromCartThunk(cartProduct.id))}>
-                        <i className="icon-trash"></i>
+                        <i className="fa-solid fa-trash"></i>
                     </button>
                 </div>
             </div>

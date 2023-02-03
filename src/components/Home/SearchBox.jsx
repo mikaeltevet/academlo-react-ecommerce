@@ -26,7 +26,7 @@ const SearchBox = () => {
                     onChange={e => setSearch(e.target.value)}
                 />
                 <button>
-                    <i className="icon-search"></i>
+                    <i className="fa-solid fa-magnifying-glass"></i>
                 </button>
             </form>
             <button 
@@ -34,12 +34,12 @@ const SearchBox = () => {
                 onClick={() => setIsOpen(!isOpen)}
                 style={{color: isOpen ? 'var(--primary)' : ''}}
             >
-                <i className="icon-filter"></i>
+                <i className="fa-solid fa-filter"></i>
                 Filters
             </button>
             <div className={`filters-modal ${isOpen ? 'open' : ''}`}>
                 <button className='close' onClick={() => setIsOpen(false)}>
-                    <i className="icon-x"></i>
+                    <i className="fa-solid fa-x"></i>
                 </button>
                 <h5>Filters</h5>
                 <Filters handleClose={() => setIsOpen(!isOpen)} />

@@ -20,7 +20,7 @@ const Galery = ({ images=[] }) => {
                         onClick={() => setCurrentImage(currentImage-1)}
                         disabled={currentImage <= 1}
                     >
-                        <i className="icon-chevron-left"></i>
+                        <i className="fa-solid fa-chevron-left"></i>
                     </button>
                 </div>
                 <div className="button-gallery right">
@@ -28,7 +28,7 @@ const Galery = ({ images=[] }) => {
                         onClick={() => setCurrentImage(currentImage+1)}
                         disabled={currentImage >= images.length}
                     >
-                        <i className="icon-chevron-right"></i>
+                        <i className="fa-solid fa-chevron-right"></i>
                     </button>
                 </div>
                 

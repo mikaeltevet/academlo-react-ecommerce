@@ -37,8 +37,8 @@ const ProductCard = ({ product }) => {
                     <span className="amount">$ {product.price}</span>
                 </div>
             </Link>
-            <button className='cart-button' onClick={addToCart}>
-                <i className='icon-shopping-cart'></i>
+            <button className="cart-button" onClick={addToCart}>
+                <i className="fa-solid fa-shopping-cart"></i>
             </button>
         </div>
     )
